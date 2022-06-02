@@ -6,9 +6,9 @@ const facultyController = require("../controllers/facultycontroller");
 router.post("/facultyregister", facultyController.register);
 router.post("/facultylogin", facultyController.login);
 router.get("/getfaculties", facultyController.getfaculties);
-// router
-//   .route("/faculty/:id")
-//   .get(facultyController.userInfo)
-//   .put(facultyController.userInfoUpdate)
-//   .delete(facultyController.userDelete);
+router
+  .route("/faculty/:id")
+  .get(facultyController.userInfo)
+  .put(facultyController.userInfoUpdate)
+  .delete(facultyController.userDelete);
 module.exports = router;
