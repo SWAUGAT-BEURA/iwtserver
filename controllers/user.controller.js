@@ -48,6 +48,8 @@ exports.login = async (req, res) => {
   try {
     const loginfields = await loginSchema.validateAsync(req.body);
     let user = await User.findOne({ email: req.body.email });
+    console.log(loginfields)
+    console.log(user)
 
     if (!user) {
       res.status(401).json({
